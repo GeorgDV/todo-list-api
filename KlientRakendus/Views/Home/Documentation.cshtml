@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "API Documentation";
+}
+<h1>@ViewData["Title"]</h1>
+
+<table class="table-bordered w-100 mt-3">
+    <thead class="thead-dark">
+        <tr>
+            <td>Used API Endpoint</td>
+            <td>Explanation</td>
+        </tr>
+    </thead>
+    <tbody class="mt-5">
+        <tr>
+            <td class="font-weight-bold">GET: api/Task</td>
+            <td>Returns all Tasks from database as a list. Used on Index (Task List) view.</td>
+        </tr>
+        <tr>
+            <td class="font-weight-bold">GET: api/Task/{{id}}</td>
+            <td>Returns a specific Task via Task ID. Used for getting corresponding Task Edit and Delete view.</td>
+        </tr>
+
+        <tr>
+            <td class="font-weight-bold">PUT: api/Task/{{id}}</td>
+            <td>Updates a specific Task via Task ID. Used for updating a Task on Edit view.</td>
+        </tr>
+        <tr>
+            <td class="font-weight-bold">POST: api/Task</td>
+            <td>Creates a new Task and adds it to database. Used on Create view.</td>
+        </tr>
+
+        <tr>
+            <td class="font-weight-bold">DELETE: api/Task/{{id}}</td>
+            <td>Deletes a specific Task via Task ID. Used for deleting a Task on Delete view.</td>
+        </tr>
+        <tr>
+            <td class="font-weight-bold"></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<table class="table-bordered w-100 mt-3">
+    <thead class="thead-dark">
+        <tr>
+            <td>Not Used API Endpoint</td>
+            <td>Explanation</td>
+        </tr>
+    </thead>
+    <tbody class="mt-1">
+        <tr>
+            <td class="font-weight-bold">GET: api/Users</td>
+            <td>Returns all Users from database. Not used currently because JWT authenication doesn't work.</td>
+        </tr>
+        <tr>
+            <td class="font-weight-bold">POST: api/Users/Authenticate</td>
+            <td>Creates a new User to database and applies an Authentication token to it.</td>
+        </tr>
+    </tbody>
+</table>
